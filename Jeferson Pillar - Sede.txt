@@ -1,0 +1,71 @@
+Jeferson Pillar - Sede
+
+[CifraClub] https://www.cifraclub.com.br/jeferson-pillar/sede/
+[YouTube] https://youtu.be/n__9VwTSwww
+
+
+# ^ up
+# v down
+# p pause
+# . plus half
+# 2 -> 1/2
+# 4 -> 1/4
+[Tom] E
+[Compasso] 4/4
+[Andamento] 100
+[Ritmo] ^2. v2 ^4 p4 ^4
+
+[COMENTÁRIOS]
+  Any type of comment
+  Like year, etc...
+
+[Intro] E4(6)  E  E4(6)  E
+
+[Verso 1]
+                 E4(6)
+A nossa alma tem sede de Ti
+                  E
+A nossa gente tem fome de Ti
+                  E4(6)      B
+A nossa igreja precisa de Ti
+        E
+Vem saciar
+
+                 E4(6)
+A nossa alma tem sede de Ti
+                  E
+A nossa gente tem fome de Ti
+                  F#m7       B
+A nossa igreja precisa de Ti
+        E  F#m7  E
+Vem saciar
+
+[Refrão]
+
+          A
+Que venha nós o teu reino
+          C#m7          E
+Pra que sejamos do Teu jeito
+     B     F#m7       B4  B
+Não somos nada sem Ti
+       E
+Vem avivar
+
+
+----------------- Acordes -----------------
+A = X 0 2 2 2 0
+B = X 2 4 4 4 2
+B4 = X 2 4 4 5 2
+C#m7 = X 4 6 4 5 4
+E = 0 2 2 1 0 0
+E4(6) = 12 11 9 9 10 9
+F#m7 = 2 X 2 2 2 X
+
+----------------- Acordes - Ukulele-----------------
+A = 2 1 0 0
+B = 4 3 2 2
+B4 = 4 4 2 2
+C#m7 = 1 1 0 2
+E = 1 4 0 2
+F#m7 = 2 4 2 4
+

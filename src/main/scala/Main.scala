@@ -1,10 +1,4 @@
-import scala.beans.BeanProperty
 import scala.io.Source
-import org.yaml.snakeyaml.Yaml
-import YamlString.*
-import java.util.Map
-import java.util.LinkedHashMap
-import scala.reflect.NameTransformer
 
 trait Part:
   val title: String
@@ -17,6 +11,9 @@ case class Comment(content: String) extends Part:
   val title: String = "comment"
 object Comment:
   def apply(lines: List[String]): Part = if lines.isEmpty then Empty else Comment(lines.mkString("\n"))
+
+case class Fill(content: String) extends Part:
+  val title: String = "fill"
 
 trait Section extends Part
 case class Inline(title: String, content: String) extends Section
@@ -65,6 +62,7 @@ def part(lines: List[String]) : Tuple2[Part, List[String]] =
     val lHead = if lines.isEmpty then null else lines.head
     lHead == null || // no more lines
     lHead.trim.startsWith("#") || // started comments
+    (lHead.trim.startsWith("(") && lHead.trim.endsWith(")"))|| // next is a fill line
     (cHead.contains("]") && cHead.indexOf("]") < cHead.length() - 1) || // single line section 
     (lHead.contains("[") || lHead.contains("---")) // next line is next section
 
@@ -80,6 +78,7 @@ def part(lines: List[String]) : Tuple2[Part, List[String]] =
   val head = linesNonEmpty.head
   if linesNonEmpty.isEmpty then Tuple2(Section(), linesNonEmpty)
   if !linesComments.isEmpty then Tuple2(Comment(linesComments), linesNonEmpty)
+  if head.trim.startsWith("(") && head.trim.endsWith(")") then Tuple2(Fill(head), linesNonEmpty.tail)
   else newSection(sectionContent(List(head), linesNonEmpty.tail))
 
 def parts(lines : List[String]) : List[Part]=
@@ -98,7 +97,7 @@ def parts(lines : List[String]) : List[Part]=
 
 
 @main def main: Unit =
-  val strList = Source.fromFile("Jeferson Pillar - Sede.txt")
+  val strList = Source.fromFile("Whindersson Nunes  - Girassol (part. Priscilla Alcantara).txt")
   .mkString.split("\n").toList
 
   parts(strList).foreach(println)
